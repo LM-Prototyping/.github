@@ -1,0 +1,9 @@
+[submodule "ldrToProto"]
+	path = ldrToProto
+	url = git@github.com:LM-Prototyping/ldrToProto.git
+[submodule "LeoCAD/models"]
+	path = LeoCAD/models
+	url = git@github.com:LM-Prototyping/leocad-examples.git
+[submodule "webotsWorkspace"]
+	path = webotsWorkspace
+	url = git@github.com:LM-Prototyping/webotsWorkspace.git
