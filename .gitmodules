@@ -7,3 +7,6 @@
 [submodule "webotsWorkspace"]
 	path = webotsWorkspace
 	url = git@github.com:LM-Prototyping/webotsWorkspace.git
+[submodule "ros2Workspace/src/brickpi3_ros2"]
+	path = ros2Workspace/src/brickpi3_ros2
+	url = git@github.com:LM-Prototyping/brickpi3_ros2.git
