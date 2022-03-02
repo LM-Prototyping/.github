@@ -13,3 +13,6 @@
 [submodule "ros2Workspace/src/ros2_examples"]
 	path = ros2Workspace/src/ros2_examples
 	url = git@github.com:LM-Prototyping/ros2_examples.git
+[submodule "LeoCAD/models"]
+	path = LeoCAD/models
+	url = git@github.com:LM-Prototyping/leocad-examples.git
