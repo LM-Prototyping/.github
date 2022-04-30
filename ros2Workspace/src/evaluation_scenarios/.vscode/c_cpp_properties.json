@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "includePath": [
+        "~/Schreibtisch/Uni/Bachelorarbeit/LM-Framework/ros2Workspace/src/evaluation_scenarios",
+        "/home/reyk/Schreibtisch/Uni/Bachelorarbeit/LM-Framework/ros2Workspace/src/evaluation_scenarios",
+        "/opt/ros/foxy/include/"
+      ],
+      "intelliSenseMode": "linux-gcc-x64",
+      "compilerPath": "/usr/bin/clang",
+      "cStandard": "c11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

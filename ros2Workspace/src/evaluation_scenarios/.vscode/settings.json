@@ -1,0 +1,18 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/reyk/ros2_foxy/ros2-linux/lib/python3.8/site-packages",
+    "/usr/local/webots/lib/controller/python38",
+    "/usr/lib/python3/dist-packages",
+    "/home/reyk/Schreibtisch/Uni/BachelorArbeit/LM-Framework/ros2Workspace/install/webots_ros2/lib/python3.8/site-packages",
+    "/home/reyk/Schreibtisch/Uni/BachelorArbeit/LM-Framework/ros2Workspace/install/lm_interfaces/lib/python3.8/site-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/reyk/ros2_foxy/ros2-linux/lib/python3.8/site-packages",
+    "/usr/local/webots/lib/controller/python38",
+    "/usr/lib/python3/dist-packages",
+    "/home/reyk/Schreibtisch/Uni/BachelorArbeit/LM-Framework/ros2Workspace/install/webots_ros2/lib/python3.8/site-packages",
+    "/home/reyk/Schreibtisch/Uni/BachelorArbeit/LM-Framework/ros2Workspace/install/lm_interfaces/lib/python3.8/site-packages",
+    "/home/reyk/Schreibtisch/Uni/BachelorArbeit/LM-Framework/ros2Workspace/install/evaluation_ros2_utils/lib/python3.8/site-packages"
+  ],
+  "editor.tabSize": 4
+}
