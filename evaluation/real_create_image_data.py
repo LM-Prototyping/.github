@@ -15,7 +15,7 @@ from multiprocessing import Process, Queue
 """
 
 PREFIX = "real"
-EVAL_DIR_NAME = "set_pow_right"
+EVAL_DIR_NAME = "compass_sensor"
 
 IMAGE_DIR = "../recording/" + PREFIX + "/" + EVAL_DIR_NAME
 CROPPED_IMAGE_PATH = "cropped_recordings/" + PREFIX + "/" + EVAL_DIR_NAME
@@ -32,7 +32,7 @@ images = np.array([(os.path.join(IMAGE_DIR, img), img) for img in os.listdir(IMA
 upper_bound_red = np.array([50, 50, 255])
 lower_bound_red = np.array([30, 30, 100])
 
-upper_bound_green = np.array([100, 255, 50])
+upper_bound_green = np.array([100, 255, 70])
 lower_bound_green = np.array([10, 100, 0])
 
 green_mean_array = []
@@ -84,7 +84,7 @@ def process(images, queue, process_index):
 
         index = image_name_matcher.search(img_name).group()
 
-        cropped_image = img[60:-43, 409:-362]
+        cropped_image = img[73:-49, 417:-368]
 
         # cv2.imwrite(CROPPED_IMAGE_PATH + "/" + img_name, cropped_image)
 
@@ -152,7 +152,7 @@ for queue in queues:
             pass
 
 new_img = cv2.imread(IMAGE_DIR + "/0.png")
-new_img = new_img[60:-43, 409:-362]
+new_img = new_img[73:-49, 417:-368]
 
 for coord in robot_mean_array:
     cv2.circle(new_img, tuple(coord), 4, (0, 255, 0), -1)

@@ -9,7 +9,7 @@ from mpl_toolkits import mplot3d
 import matplotlib.pyplot as plt
 
 
-SETUP_NAME = "set_vel_right"
+SETUP_NAME = "set_pow_right"
 
 setup = {
     "compass_sensor": ["compass_sensor", "Eval_CompassSensor_compass_sensor_04_28__19_28_48"],
@@ -319,16 +319,16 @@ def create_3d_plot(sim_timesteps, real_timesteps):
 
     ## SIM
     x_data, y_data, z_data = _extract_axes(sim_timesteps)
-    _draw_plots(ax, x_data, y_data, z_data, "Robotcoordinate in the simulation")
+    _draw_plots(ax, x_data, y_data, z_data, "Robot path in simulation")
 
     ## REAL
     x_data, y_data, z_data = _extract_axes(real_timesteps)
-    _draw_plots(ax, x_data, y_data, z_data, "Robotcoordinate in the real world")
+    _draw_plots(ax, x_data, y_data, z_data, "Robot path in reality")
 
     ax.legend()
     ax.set_zlabel("Time in [ms]")
-    ax.set_xlabel("X-Coordinate in pixelspace")
-    ax.set_ylabel("Y-Coordinate in pixelspace")
+    ax.set_xlabel("X-coordinate in pixel space")
+    ax.set_ylabel("Y-coordinate in pixel space")
 
     plt.savefig(RESULT_DIR + "3d_path_plot.png")
     plt.show()
@@ -345,7 +345,7 @@ real_timestep_dict = normalise_real_points(real_timestep_dict, offset, rot_origi
 
 real_timestep_dict = create_real_pos_for_timesteps(sim_timestep_dict, real_timestep_dict)
 
-print(real_timestep_dict.keys())
+print(len(real_timestep_dict.keys()), len(sim_timestep_dict.keys()))
 
 new_img = cv2.imread("simulation_empty.png")
 
@@ -357,13 +357,15 @@ cv2.waitKey(0)
 
 cv2.imwrite(RESULT_DIR + "path.png", new_img)
 
-plt.scatter(y_real, x_real, label="Robot path in reality")
 plt.scatter(y_sim, x_sim, label="Robot path in simulation")
+plt.scatter(y_real, x_real, label="Robot path in reality")
 
 plt.xlabel("X-Coordinate in pixel space")
 plt.ylabel("Y-Coordinate in pixel space")
 
 plt.legend()
+
+plt.gca().set_aspect("equal", adjustable="box")
 
 plt.savefig(RESULT_DIR + "2d_path.png")
 plt.show()
